@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Create a connection to the MySQL database
 const db = mysql.createConnection({
-    host: 'bdqhkrtatoqrzc9mvw10-mysql.services.clever-cloud.com',
-    user: 'uli0c6kzqscfp2gz',
-    password: 'iRnqEollaydTw9VqJpNN', 
-    database: 'bdqhkrtatoqrzc9mvw10'
+    host: 'bxkfyq6ddqop9whqnv9u-mysql.services.clever-cloud.com',
+    user: 'uow0oserm41zait8',
+    password: 'PCE0qrJcAdV2KTaOi6dE', 
+    database: 'bxkfyq6ddqop9whqnv9u'
 });
 
 // Connect to the database
