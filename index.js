@@ -26,11 +26,11 @@ db.connect(err => {
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "Raymond I. ": 0,
-    "Florence U. ": 0,
-    "Jean Paul K. ": 0,
-    "Gaella U. ": 0,
-    "Danny H. ": 0
+    "natalie . ": 0,
+    "louise . ": 0,
+    "miguel . ": 0,
+    "lenon . ": 0,
+    "fenty . ": 0
 };
 
 // In-memory storage for user data (for simplicity)
@@ -66,7 +66,7 @@ app.post('/ussd', (req, res) => {
         // Third level menu: Main menu
         response = userLanguages[phoneNumber] === 'en' ? 
             `CON Hi ${userNames[phoneNumber]}, choose an option:\n1. Vote Candidate\n2. View Votes` : 
-            `CON Muraho ${userNames[phoneNumber]}, Hitamo Icyo Ushaka:\n1. Piga kura\n2. Tazama kura`;
+            `CON Muraho ${userNames[phoneNumber]}, Hitamo Icyo Ushaka:\n1. Gutora\n2. Kureba abatowe`;
     } else if (userInput.length === 3) {
         if (userInput[2] === '1') {
             // Check if the phone number has already voted
@@ -77,14 +77,14 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. Raymond IGABINEZA\n2. Florence UMUTONIWASE\n3. Jean Paul KWIBUKA\n4. Gaella UWAYO\n5. Danny HABIMANA` : 
-                    `CON Hitamo Umukandida:\n1. Raymond IGABINEZA\n2. Florence UMUTONIWASE\n3. Jean Paul KWIBUKA\n4. Gaella UWAYO\n5. Danny HABIMANA`;
+                    `CON Select a candidate:\n1. Natalie MUKASHEMA\n2. Louise IRADUKUNDA\n3. Lenon SHAMI\n4. Miguel RUGERO\n5. Fenty CYUZUZO` : 
+                    `CON Hitamo Umukandida:\n1. Natalie MUKASHEMA\n2. Louise IRADUKUNDA\n3. Lenon SHAMI\n4.Miguel RUGERO\n5. Fenty CYUZUZO`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
             response = userLanguages[phoneNumber] === 'en' ? 
                 `END Votes:\n` : 
-                `END Kura:\n`;
+                `END Gutora:\n`;
             for (let candidate in votes) {
                 response += `${candidate}: ${votes[candidate]} votes\n`;
             }
