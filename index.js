@@ -26,11 +26,11 @@ db.connect(err => {
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "Natalie MUKASHEMA . ": 0,
-    "Louise IRADUKUNDA . ": 0,
-    "Lenon SHAMI . ": 0,
-    "Miguel RUGERO . ": 0,
-    "Fenty CYUZUZO . ": 0
+    "Natalie . ": 0,
+    "Louise . ": 0,
+    "Lenon . ": 0,
+    "Miguel . ": 0,
+    "Fenty . ": 0
 };
 
 // In-memory storage for user data (for simplicity)
